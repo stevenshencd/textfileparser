@@ -2,10 +2,13 @@
 # -*- coding: utf-8 -*-
 
 """
-This is a general clase to provide functions for text file ready, analysis and report.
+This is a general class to provide functions for text file analysis and report.
 """
 import os
 import shutil
+from Tkinter import *
+import tkFileDialog
+from textutil import *
 
 class textparser:
 
@@ -13,14 +16,20 @@ class textparser:
         print "init"
 
     def openfile(self,filename):
+        if filename == '' :
+            filename = tkFileDialog.askopenfilename(initialdir='C:/')
         return open(filename,"r")
 
     def output(self,filename):
+        if filename == '' :
+            filename = tkFileDialog.askopenfilename(initialdir='C:/')
         return open(filename, "w")
 
-    def criticalIssue(self):
-        print "function"
-    def getfilebox(self):
-        print "open window"
+    def csvparser(self):
+        f = self.openfile("")
+        firstline = f.readline()
 
-#end of class
+
+
+if __name__ == '__main__':
+    textparser().openfile("")
