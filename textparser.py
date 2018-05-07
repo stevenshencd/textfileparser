@@ -21,21 +21,27 @@ class textparser:
             filename = tkFileDialog.askopenfilename(initialdir='C:/')
         return open(filename,"r")
 
-    def output(self,filename):
+    def opencsvfile(self,filename):
         if filename == '' :
             filename = tkFileDialog.askopenfilename(initialdir='C:/')
+        return csv.reader(open(filename,"r"))
+
+    def output(self,filename):
+        if filename == '' :
+            filename = tkFileDialog.asksaveasfilename()
         return open(filename, "w")
 
-    def csvparser(self):
-        f = self.openfile("")
-        reader = csv.reader(f)
+    def inquery_pass(self):
+        csvdata = self.opencsvfile("")
         totalpass = 0
-        for i, rows in enumerate(reader):
+        for i, row in enumerate(csvdata):
             # to add function for different parser and report, and to replace following lines
-            if i >0:
-                totalpass = totalpass + int(rows[1])
+            if i > 0:
+                totalpass = totalpass + int(row[1])
 
-        print "total pass:", totalpass
+        fout = self.output("")
+        fout.write("total pass:" + str(totalpass))
+        fout.close()
 
 if __name__ == '__main__':
-    textparser().csvparser()
+    textparser().inquery_pass()
