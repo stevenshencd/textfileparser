@@ -9,6 +9,7 @@ import shutil
 from Tkinter import *
 import tkFileDialog
 from textutil import *
+import csv
 
 class textparser:
 
@@ -27,9 +28,14 @@ class textparser:
 
     def csvparser(self):
         f = self.openfile("")
-        firstline = f.readline()
+        reader = csv.reader(f)
+        totalpass = 0
+        for i, rows in enumerate(reader):
+            # to add function for different parser and report, and to replace following lines
+            if i >0:
+                totalpass = totalpass + int(rows[1])
 
-
+        print "total pass:", totalpass
 
 if __name__ == '__main__':
-    textparser().openfile("")
+    textparser().csvparser()
