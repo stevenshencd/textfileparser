@@ -29,7 +29,7 @@ class textparser:
     def output(self,filename):
         if filename == '' :
             filename = tkFileDialog.asksaveasfilename()
-        return open(filename, "w")
+        return open(filename, "a")
 
     def inquery_pass(self):
         csvdata = self.opencsvfile("")
@@ -47,7 +47,7 @@ class textparser:
     def sumbyITag(self):
         ITags = [] # list of execution status by I-Tag
         record = {"ITag":"","Pass":0,"Failed":0,"NoRun":0,"Blocked":0,"NA":0,"NotComplete":0,"Others":0}
-        csvdata = self.opencsvfile("")
+        csvdata = self.opencsvfile("c:\github\data\execution180724.csv")
         print len(ITags)
         print record
         for i, row in enumerate(csvdata):
@@ -116,9 +116,16 @@ class textparser:
                         print "new Itag:"
                         print newItag
                         ITags.append(newItag)
+        # write result to file
 
+        fout = self.output("c:\github\data\ITagsummary.csv")
         for item in ITags:
-            print item["ITag"], item["Pass"], item["Failed"]
+            line = item["ITag"] + "," + str(item["Pass"]) + "," + str(item["Failed"]) + "," \
+                   + str(item["Blocked"]) + "," + str(item["NoRun"]) + "," + str(item["NotComplete"]) \
+                   + "," + str(item["NA"]) + "," + str(item["Others"]) + "\n"
+            print line
+            fout.write(line)
+        fout.close()
 
 if __name__ == '__main__':
     textparser().sumbyITag()
