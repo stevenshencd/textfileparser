@@ -26,4 +26,5 @@ def demo():
     d = {'name':'ss', 'age':28}
     print d['age'], d['name'], d.viewvalues()
 
-demo()
+if __name__ == '__main__':
+    demo()
