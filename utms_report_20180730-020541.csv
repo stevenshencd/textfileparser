@@ -1,0 +1,110 @@
+Test,I-Tag,Stage,Status
+stage_3_Dedupe_Compress IO VMs in different stroage containers  when pull_insert drive,I164_I39_I167,Stage_1,No Run
+Stage_2_Reprotection after Planed Failover,I54,Stage_2,No Run
+stage_1_Dedupe_Compress IO VMs in different stroage containers  when pull_insert drive,I164_I39_I167,Stage_1,Failed
+Stage_1_Storage vMotion between Virtual Datastores (same Appliance),I180,Stage_1,No Run
+stage_2_VM Deploy_Delete With Dedupe_compress IO,I164_I39_I167,Stage_1,No Run
+stage_3_Long term  trim IO with object deletion,I164_I39_I167,Stage_1,No Run
+Stage_1_Create Clone of a Virtual Machine from a snapshot VM,I180,Stage_1,No Run
+Stage_3_Create Linked Clone of a Virtual Machine from a snapshot VM,I180,Stage_3,No Run
+stage_3_Replication with small RPO and massive IO,I164_I39_I167,Stage_1,Failed
+Stage_3_Create Clone of a Virtual Machine from a snapshot VM,I180,Stage_3,No Run
+stage_3_Multiple IO patterns different dedupe ratios and compression ratios  flush in parallel,I164_I39_I167,Stage_1,No Run
+stage_2_Multiple IO patterns different dedupe ratios and compression ratios  flush in parallel,I164_I39_I167,Stage_1,No Run
+Stage_2_Create Clone of a Virtual Machine from a snapshot VM,I180,Stage_2,No Run
+stage_2_Massive object modifications expand_shrink_during IO running,I164_I39_I167,Stage_1,No Run
+Stage_2_Massive VM operations with heavy IO,I180,Stage_2,No Run
+Stage_3_Massive VM operations with high computing resource utlization and heavy IO,I180,Stage_3,No Run
+stage_3_Massive object modifications expand_shrink_during IO running,I164_I39_I167,Stage_1,No Run
+Stage_3_Storage vMotion between Virtual Datastores (same Appliance),I180,Stage_3,No Run
+Stage_2_Storage vMotion between Virtual Datastores (same Appliance),I180,Stage_2,No Run
+Host and Host Group Management,I177,Stage_1,No Run
+stage_2_Dedupe_Compress IO VMs in different stroage containers  when pull_insert drive,I164_I39_I167,Stage_1,No Run
+Stage_1_Deploy Vmware VMs on HCI based Cluster,I41,Stage_1,Failed
+Stage_1_Clones from CGs and Volumes_Refresh_Restore,I181,Stage_1,Passed
+stage_1_VM Deploy_Delete With Dedupe_compress IO,I164_I39_I167,Stage_1,Failed
+stage_3_Modification and trim on large volume with dedupe_compress IO,I164_I39_I167,Stage_1,No Run
+Stage_1_Variable Operations of Block Volumes_Expand,I58,Stage_1,Failed
+Stage_1_Variable Operations of Block Volumes_SC,I58,Stage_1,No Run
+Stage_1_Variable Operations of Block Volumes_SAN,I58,Stage_1,No Run
+Stage_2_Variable Operations of Block Volumes_Expand,I58,Stage_2,No Run
+Stage_2_Variable Operations of Block Volumes_Basic_IO,I58,Stage_2,Passed
+Stage_2_Variable Operations of Block Volumes_SC,I58,Stage_2,No Run
+Stage_2_Variable Operations of Block Volumes_SAN,I58,Stage_2,No Run
+Stage_1_Variable Operations of Block Volumes_Basic_IO,I58,Stage_1,Failed
+Stage_1_Replication and Policy Support for CG Membership Changes,I54,Stage_1,Failed
+Reprotection after Planed Failover,I54,Stage_1,No Run
+Stage_1_Snapshot Scheduler,I53,Stage_1,Passed
+Stage_1_Block Asynchronous Replication,I54,Stage_1,Failed
+VMware VMs creation with different virtual disk types,I41,Stage_1,No Run
+VMware VM Snapshots management via vSphere,I51,Stage_1,No Run
+Deploy VMware VMs on volumes and mounted to external ESXi hosts,I41,Stage_1,No Run
+Storage Container creation and space accounting,I41,Stage_1,No Run
+stage_1_massive_operataions_with_dedupe_comression_IO,I164_I39_I167,Stage_1,Failed
+stage_2_massive_operataions_with_dedupe_comression_IO,I164_I39_I167,Stage_1,No Run
+Stage_1_Async Replication lifecycle,I54,Stage_1,No Run
+Stage_2_Async replicaiton session Resiliency,I54,Stage_2,No Run
+Stage_2_Snapshots LifeCycle,I53,Stage_2,No Run
+Stage_1_Snapshots LifeCycle,I53,Stage_1,Passed
+Stage_1_Async replication Session Resiliency,I54,Stage_1,No Run
+Stage_2_Snapshots Scheduler,I53,Stage_2,No Run
+Stage_2_Reprotection after Unplaned Failover,I54,Stage_2,No Run
+Stage_1_Reprotection after Unplaned Failover,I54,Stage_1,No Run
+stage_2_Replication with small RPO and massive IO,I164_I39_I167,Stage_1,Failed
+Stage_2_Create Linked Clone of a Virtual Machine from a snapshot VM,I180,Stage_2,No Run
+stage_2_trim IO on VMs with multiple type VMD,I164_I39_I167,Stage_1,No Run
+Stage_2_VMware VM clone management from vSphere or ESXCLI (limit to 10 Clones in parallel),I180,Stage_2,No Run
+stage_1_trim IO on VMs with multiple type VMD,I164_I39_I167,Stage_1,Failed
+stage_3_massive_operataions_with_dedupe_comression_IO,I164_I39_I167,Stage_1,No Run
+stage_1_Replication with small RPO and massive IO,I164_I39_I167,Stage_1,Failed
+Stage_3_VMware VM clone management from vSphere or ESXCLI (limit to 10 Clones in parallel),I180,Stage_3,No Run
+stage_3_Glitch create object_delete object_issue IO in parallel,I164_I39_I167,Stage_1,Failed
+stage_2_Glitch create object_delete object_issue IO in parallel,I164_I39_I167,Stage_1,Running
+Stage_1_Clones from CGs and Volumes_Refresh,I53,Stage_1,No Run
+Stage_2_Clones from CGs and Volumes_Refresh,I53,Stage_2,No Run
+Stage_1_Reprotection after Planed Failover,I54,Stage_1,Failed
+Stage_3_Vmware_Horizon_for_View_Perform_Tasks,I41,Stage_3,No Run
+Stage_1_Create snapshots (can up to 10) per VM from vSphere,I51,Stage_1,Failed
+Stage_1_Vmware_Horizon_for_View_Perform_Tasks,I41,Stage_1,No Run
+Stage_2_Vmware_Horizon_for_View_Perform_Tasks,I41,Stage_2,No Run
+Stage_1_Snapshots edit_delete_revert from vSphere,I51,Stage_1,No Run
+Stage_2_Snapshots edit_delete_revert from vSphere,I51,Stage_2,No Run
+Stage_2_Create snapshots (can up to 10) per VM from vSphere,I51,Stage_2,No Run
+Stage_3_Create snapshots (can up to 10) per VM from vSphere,I51,Stage_3,No Run
+Stage_3_Snapshots edit_delete_revert from vSphere,I51,Stage_3,No Run
+Stage_1_Auto VM Snapshots management through storage policy,I51,Stage_1,No Run
+Stage_1_Async_replication_session_with_clones,I54,Stage_1,No Run
+Stage_2_Async_replication_session_with_clones,I54,Stage_2,No Run
+Stage_2_Clones from CGs and Volumes_Refresh_Restore,I181,Stage_2,No Run
+Stage_1_Clones from CGs and Volumes_Basic_IO,I177,Stage_1,No Run
+Stage_2_Clones from CGs and Volumes_Basic_IO,I177,Stage_2,No Run
+Stage_1_Create Linked Clone of a Virtual Machine from a snapshot VM,I180,Stage_1,No Run
+Stage_1_VMware VM clone management from vSphere or ESXCLI (limit to 10 Clones in parallel),I180,Stage_1,Not Completed
+stage_3_Volume Create_Delete Storming with dedupe_compress IO,I164_I39_I167,Stage_1,No Run
+stage_2_Volume Create_Delete Storming with dedupe_compress IO,I164_I39_I167,Stage_1,No Run
+Stage_3_Massive VM operations with high computing resource utlization and heavy IO,I51,Stage_3,No Run
+Stage_3_Massive VM operations with high computing resource utlization and heavy IO,I41,Stage_3,No Run
+Stage_2_Massive VM operations with heavy IO,I51,Stage_2,No Run
+Stage_2_Massive VM operations with heavy IO,I41,Stage_2,No Run
+stage_1_Volume Create_Delete Storming with dedupe_compress IO,I164_I39_I167,Stage_1,No Run
+stage_3_VM Deploy_Delete With Dedupe_compress IO,I164_I39_I167,Stage_1,No Run
+Stage_3_Establish iSCSI connection to VMs running on external ESXi hosts and run IO,I41,Stage_3,No Run
+Stage_1_Create and attach Volums to External ESXi hosts via iSCSI and run IO,I41,Stage_1,No Run
+Stage_1_Create_List_Delete Volums on HCI based Cluster,I41,Stage_1,No Run
+Stage_2_Create_List_Delete Volums on HCI based Cluster,I41,Stage_2,No Run
+Stage_3_Create_List_Delete Volums on HCI based Cluster,I41,Stage_3,No Run
+Stage_2_Deploy Vmware VMs on HCI based Cluster,I41,Stage_2,No Run
+Stage_3_Deploy Vmware VMs on HCI based Cluster,I41,Stage_3,No Run
+Stage_2_Block Asynchronous Replication,I54,Stage_2,No Run
+Stage_1_Establish iSCSI connection to VMs running on external ESXi hosts and run IO,I41,Stage_1,No Run
+Stage_2_Establish iSCSI connection to VMs running on external ESXi hosts and run IO,I41,Stage_2,No Run
+Stage_1_Vmware_Horizon_for_View_Deployment,I41,Stage_1,No Run
+Stage_3_Create_Delete_Modify VVol Datastores,I41,Stage_3,No Run
+Stage_2_Manual initiate VM migrations through vShphere,I41,Stage_2,No Run
+Stage_1_Manual initiate VM migrations through vShphere,I41,Stage_1,No Run
+Stage_3_Create and attach Volums to External ESXi hosts via iSCSI and run IO,I41,Stage_3,No Run
+Stage_2_Create and attach Volums to External ESXi hosts via iSCSI and run IO,I41,Stage_2,No Run
+Stage_2_Create_Delete_Modify VVol Datastores,I41,Stage_2,No Run
+Stage_1_Create_Delete_Modify VVol Datastores,I41,Stage_1,Failed
+Stage_2_DRS triggered VM migration,I41,Stage_2,No Run
+Stage_1_DRS triggered VM migration,I41,Stage_1,No Run
