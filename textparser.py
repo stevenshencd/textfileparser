@@ -8,7 +8,6 @@ import os
 import shutil
 from Tkinter import *
 import tkFileDialog
-from textutil import *
 import csv
 import time
 
