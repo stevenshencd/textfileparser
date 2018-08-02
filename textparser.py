@@ -45,7 +45,7 @@ class textparser:
 
     def sumbyITag(self, inputpath):
         ITags = [] # list of execution status by I-Tag
-        record = {"ITag":"","Pass":0,"Failed":0,"NoRun":0,"Blocked":0,"NA":0,"NotComplete":0,"Others":0}
+        record = {"ITag":"","Stage":"","Pass":0,"Failed":0,"NoRun":0,"Blocked":0,"NA":0,"NotComplete":0,"Others":0}
         csvdata = self.opencsvfile(inputpath)
 
         for i, row in enumerate(csvdata):
@@ -53,6 +53,7 @@ class textparser:
             if i > 0: #first row is head line, looping start from second row
                 if len(ITags) == 0: # for vacant ITags list
                     record["ITag"] = row[1]
+                    record["Stage"] = row[2]
                     status = row[3]
                     if status == "Passed":
                         record["Pass"] = 1
@@ -72,7 +73,7 @@ class textparser:
                 else:
                     ITagexisted = 0
                     for r in ITags:
-                        if r["ITag"] == row[1]:
+                        if r["ITag"] == row[1] and r["Stage"] == row[2]:
                             ITagexisted = 1
                             status = row[3]
                             if status == "Passed":
@@ -91,8 +92,9 @@ class textparser:
                                 r["Others"] = int(r["Others"]) + 1
 
                     if ITagexisted == 0:
-                        newItag = {"ITag":"","Pass":0,"Failed":0,"NoRun":0,"Blocked":0,"NA":0,"NotComplete":0,"Others":0}
+                        newItag = {"ITag":"","Stage":"","Pass":0,"Failed":0,"NoRun":0,"Blocked":0,"NA":0,"NotComplete":0,"Others":0}
                         newItag["ITag"] = row[1]
+                        newItag["Stage"] = row[2]
                         status = row[3]
                         if status == "Passed":
                             newItag["Pass"] = 1
@@ -113,10 +115,10 @@ class textparser:
         # write result to file
         reportdate = str(time.strftime("%Y-%m-%d", time.localtime()))
         fout = self.output("ITagreport_" + reportdate + ".csv")
-        headline = "Date,ITag,Pass,Failed,Blocked,NoRun,NotComplete,NA,Others\n"
+        headline = "Date,ITag,Stage,Pass,Failed,Blocked,NoRun,NotComplete,NA,Others\n"
         fout.write(headline)
         for item in ITags:
-            line = reportdate + "," + item["ITag"] + "," + str(item["Pass"]) + "," + str(item["Failed"]) + "," \
+            line = reportdate + "," + item["ITag"] + "," +item["Stage"] + "," + str(item["Pass"]) + "," + str(item["Failed"]) + "," \
                    + str(item["Blocked"]) + "," + str(item["NoRun"]) + "," + str(item["NotComplete"]) \
                    + "," + str(item["NA"]) + "," + str(item["Others"]) + "\n"
             fout.write(line)
